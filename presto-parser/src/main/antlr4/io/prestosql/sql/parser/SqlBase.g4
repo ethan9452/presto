@@ -18,6 +18,32 @@ tokens {
     DELIMITER
 }
 
+
+singleColumnStatement
+    : singleColumn EOF
+
+
+singleColumn
+    : expression (AS? identifier)?                          #selectSingle
+    ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 singleStatement
     : statement EOF
     ;
