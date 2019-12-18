@@ -35,6 +35,7 @@ import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import javax.inject.Inject;
+import javax.swing.plaf.nimbus.State;
 
 import java.util.Arrays;
 import java.util.List;
@@ -68,6 +69,33 @@ public class SqlParser
             .build();
 
     private boolean enhancedErrorHandlerEnabled;
+
+    public static void main(String[] args)
+    {
+        SqlParser parser = new SqlParser(  );
+    }
+
+    public Statement createStatementForSingleCol(String sql)
+    {
+        return (Statement) invokeParser( "blah", sql, SqlBaseParser::singleColumnStatement, new ParsingOptions(  ) );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public SqlParser()
     {
