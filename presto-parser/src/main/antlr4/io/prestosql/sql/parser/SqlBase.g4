@@ -20,6 +20,7 @@ tokens {
 
 singleColumnStatement
     : singleColumn EOF
+    ;
 
 singleColumn
     : expression (AS? identifier)?                          #selectSingle
